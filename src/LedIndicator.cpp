@@ -1,11 +1,11 @@
-#ifndef LED_INDICATOR_OBSERVER_CLASS
-#define LED_INDICATOR_OBSERVER_CLASS
+#ifndef LED_INDICATOR_CLASS
+#define LED_INDICATOR_CLASS
 
 #include "Arduino.h"
 #include "Observer.h"
 #include "EventArgs.cpp"
 
-class LedIndicatorObserver : public Observer<EventArgs>
+class LedIndicator : public Observer<EventArgs>
 {
   public:
 	void notify(EventArgs args) override

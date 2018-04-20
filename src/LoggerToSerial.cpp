@@ -1,11 +1,11 @@
-#ifndef LOGGER_TO_SERIAL_OBSERVER_CLASS
-#define LOGGER_TO_SERIAL_OBSERVER_CLASS
+#ifndef LOGGER_TO_SERIAL_CLASS
+#define LOGGER_TO_SERIAL_CLASS
 
 #include <Arduino.h>
 #include "Observer.h"
 #include "EventArgs.cpp"
 
-class LoggerToSerialObserver : public Observer<EventArgs>
+class LoggerToSerial : public Observer<EventArgs>
 {
   public:
     void notify(EventArgs args) override

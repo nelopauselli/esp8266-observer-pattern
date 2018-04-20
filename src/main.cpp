@@ -1,9 +1,9 @@
 #include <Arduino.h>
 
 #include "SensorReader.cpp"
-#include "LoggerToSerialObserver.cpp"
-#include "LedIndicatorObserver.cpp"
-#include "MqttPublisherObserver.cpp"
+#include "LedIndicator.cpp"
+#include "LoggerToSerial.cpp"
+#include "MqttPublisher.cpp"
 
 SensorReader reader;
 
@@ -13,9 +13,9 @@ void setup()
     pinMode(LED_BUILTIN, OUTPUT);
     randomSeed(analogRead(A0));
 
-    reader.attach(new LedIndicatorObserver());
-    reader.attach(new LoggerToSerialObserver());
-    reader.attach(new MqttPublisherObserver());
+    reader.attach(new LedIndicator());
+    reader.attach(new LoggerToSerial());
+    reader.attach(new MqttPublisher());
     
     Serial.println("");
     Serial.println("ready");

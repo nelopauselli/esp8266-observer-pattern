@@ -1,5 +1,5 @@
-#ifndef MQTT_PUBLISHER_OBSERVER_CLASS
-#define MQTT_PUBLISHER_OBSERVER_CLASS
+#ifndef MQTT_PUBLISHER_CLASS
+#define MQTT_PUBLISHER_CLASS
 
 #include "Arduino.h"
 #include "Observer.h"
@@ -7,7 +7,7 @@
 
 #define SIZE 10
 
-class MqttPublisherObserver : public Observer<EventArgs>
+class MqttPublisher : public Observer<EventArgs>
 {
   public:
 	void notify(EventArgs args) override

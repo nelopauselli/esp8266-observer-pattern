@@ -25,9 +25,9 @@ void setup()
 {
     ...
 
-    reader.attach(new LedIndicatorObserver());
-    reader.attach(new LoggerToSerialObserver());
-    reader.attach(new MqttPublisherObserver());
+    reader.attach(new LedIndicator());
+    reader.attach(new LoggerToSerial());
+    reader.attach(new MqttPublisher());
     
     ...
 }
@@ -41,6 +41,8 @@ void loop()
 ## Define a Subject
 > We define a class inheriting **Subject** with the type of notification argument
 ```cpp
+#define INTERVAL 2000
+
 class SensorReader : public Subject<EventArgs>
 {
   public:
@@ -80,7 +82,7 @@ struct EventArgs
 
 ### Observer that send information over Serial
 ```cpp
-class LoggerToSerialObserver : public Observer<EventArgs>
+class LoggerToSerial : public Observer<EventArgs>
 {
   public:
     void notify(EventArgs args) override
@@ -95,7 +97,7 @@ class LoggerToSerialObserver : public Observer<EventArgs>
 
 ### Observer that turn on or off a LED
 ```cpp
-class LedIndicatorObserver : public Observer<EventArgs>
+class LedIndicator : public Observer<EventArgs>
 {
   public:
 	void notify(EventArgs args) override

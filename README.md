@@ -7,6 +7,7 @@ _This code was written using [PlatformIO](https://platformio.org/) and [vscode](
 Implement Observer Design Pattern in a microcontroller.
 
 > Can we use design patterns in our code for microcontrollers? ... obviously yes (otherwise we would not be here).
+
 > OK, show me the code!
 
 ## Diagram
@@ -16,25 +17,19 @@ Implement Observer Design Pattern in a microcontroller.
 
 ## Program 
 ```cpp
-#include "SensorReader.cpp"
-#include "LoggerToSerialObserver.cpp"
-#include "LedIndicatorObserver.cpp"
-#include "MqttPublisherObserver.cpp"
+#include ...
 
 SensorReader reader;
 
 void setup()
 {
-    Serial.begin(9600);
-    pinMode(LED_BUILTIN, OUTPUT);
-    randomSeed(analogRead(A0));
+    ...
 
     reader.attach(new LedIndicatorObserver());
     reader.attach(new LoggerToSerialObserver());
     reader.attach(new MqttPublisherObserver());
     
-    Serial.println("");
-    Serial.println("ready");
+    ...
 }
 
 void loop()

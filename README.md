@@ -80,7 +80,7 @@ struct EventArgs
 ## Define Observers
 > We define different classes inheriting **Observer**
 
-### Observer that send information over Serial
+### Observer which send information over Serial
 ```cpp
 class LoggerToSerial : public Observer<EventArgs>
 {

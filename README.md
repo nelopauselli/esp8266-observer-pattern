@@ -7,7 +7,6 @@ _This code was written using [PlatformIO](https://platformio.org/) and [vscode](
 Implement Observer Design Pattern in a microcontroller.
 
 > Can we use design patterns in our code for microcontrollers? ... obviously yes (otherwise we would not be here).
-
 > OK, show me the code!
 
 ## Diagram

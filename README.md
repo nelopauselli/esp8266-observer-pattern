@@ -38,16 +38,6 @@ void loop()
 }
 ```
 
-## Structure of the event argument used:
-```cpp
-struct EventArgs
-{
-  float temperature;
-  float humidity;
-};
-```
-> Yes, it's a struct but could be a class too
-
 ## Define a Subject
 > We define a class inheriting **Subject** with the type of notification argument
 ```cpp
@@ -74,8 +64,19 @@ class SensorReader : public Subject<EventArgs>
 };
 ```
 
+## Structure of the event argument used:
+
+```cpp
+struct EventArgs
+{
+  float temperature;
+  float humidity;
+};
+```
+> Yes, it's a struct but could be a class too
+
 ## Define Observers
-> We define different class inheriting **Observer**
+> We define different classes inheriting **Observer**
 
 ### Observer that send information over Serial
 ```cpp

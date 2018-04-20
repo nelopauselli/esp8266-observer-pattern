@@ -6,14 +6,14 @@ _This code was written using [PlatformIO](https://platformio.org/) and [vscode](
 ## Goal
 Implement Observer Design Pattern in a microcontroller.
 
-- Can we use design patterns in our code for microcontrollers? ... obviously yes (otherwise we would not be here).
+> Can we use design patterns in our code for microcontrollers? ... obviously yes (otherwise we would not be here).
 
-- OK, show me the code!
+> OK, show me the code!
 
 ## Diagram
 ![class diagram](https://github.com/nelopauselli/esp8266-observer-pattern/raw/master/doc/diagram.png  "")
 
-- I said "code", not diagram!
+> I said "code", not diagram!
 
 ## Program 
 ```cpp

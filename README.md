@@ -4,9 +4,12 @@ A sample implementation of Observer Pattern
 _This code was written using [PlatformIO](https://platformio.org/) and [vscode](https://code.visualstudio.com/). Would you like This code to be compatible with the Arduino IDE?... tell me!_
 
 ## Goal
-Implement a design pattern in a microcontroller
+Implement a design pattern in a microcontroller.
 
-## Program code sample
+## Diagram
+![class diagram](https://github.com/nelopauselli/esp8266-observer-pattern/raw/master/doc/diagram.png  "")
+
+## Program 
 ```cpp
 #include "SensorReader.cpp"
 #include "LoggerToSerialObserver.cpp"

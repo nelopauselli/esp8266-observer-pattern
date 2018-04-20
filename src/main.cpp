@@ -5,7 +5,7 @@
 #include "LoggerToSerial.cpp"
 #include "MqttPublisher.cpp"
 
-SensorReader reader;
+SensorReader sensorReader;
 
 void setup()
 {
@@ -13,9 +13,9 @@ void setup()
     pinMode(LED_BUILTIN, OUTPUT);
     randomSeed(analogRead(A0));
 
-    reader.attach(new LedIndicator());
-    reader.attach(new LoggerToSerial());
-    reader.attach(new MqttPublisher());
+    sensorReader.attach(new LedIndicator());
+    sensorReader.attach(new LoggerToSerial());
+    sensorReader.attach(new MqttPublisher());
     
     Serial.println("");
     Serial.println("ready");
@@ -23,5 +23,5 @@ void setup()
 
 void loop()
 {
-    reader.work();
+    sensorReader.work();
 }

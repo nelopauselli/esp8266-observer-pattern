@@ -19,22 +19,22 @@ Implement Observer Design Pattern in a microcontroller.
 ```cpp
 #include ...
 
-SensorReader reader;
+SensorReader sensorReader;
 
 void setup()
 {
     ...
 
-    reader.attach(new LedIndicator());
-    reader.attach(new LoggerToSerial());
-    reader.attach(new MqttPublisher());
+    sensorReader.attach(new LedIndicator());
+    sensorReader.attach(new LoggerToSerial());
+    sensorReader.attach(new MqttPublisher());
     
     ...
 }
 
 void loop()
 {
-    reader.work();
+    sensorReader.work();
 }
 ```
 

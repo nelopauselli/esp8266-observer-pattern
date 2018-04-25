@@ -27,7 +27,7 @@ class Subject
     }
 
   private:
-    Observer<TEventArgs> *_observers;
+    Observer<TEventArgs> *_observers = NULL;
 };
 
 #endif
